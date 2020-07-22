@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail Search</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="search.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body topmargin="40" leftmargin="40" onLoad="downloadCocktail()"></body>
+<div class="jumbotron">
+    <h1 class="display-4, text-center">Quarentine Cocktails!</h1>
+    <p class="lead, text-center">A site to search, generate random, and add your own cocktails!</p>
+    <hr class="my-4">
+    <p class= "text-center">Search for a Cocktail!</p>
+    <div class = "center">
+        <a class="btn btn-primary btn-lg" href="#" role="button" onclick="downloadCocktail()">Search Cocktails</a><input type="text" id="cocktail" value="Margarita">
+    </div>
+</div>
+</div>
+
+<!-- <button onClick="downloadCocktail()">Search Cocktails</button> : <input type="text" id="cocktail" value="Margarita"><br>
+</br> -->
+<div class="card">
+    <div class="card-body">
+        <div id="drink-section">Loading..</div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
+
+<script src="/js/search.js"></script>

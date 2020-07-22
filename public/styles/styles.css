@@ -1,3 +1,30 @@
 .list-group-item {
   line-height: 2.5;
 }
+button,
+    div,
+    form,
+    input {
+      margin: 10px;
+}
+
+#drink-section img{
+    width: 50%;
+    height: 75%;
+}
+
+#drink-section{
+    text-align: center;
+}
+
+.btn{
+    text-align: center;
+    
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
