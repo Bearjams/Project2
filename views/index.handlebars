@@ -7,11 +7,11 @@
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
             <label for="example-text">Add a Recipe</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Martini">
+            <input type="text" id="example-name" class="form-control" aria-describedby="example-text" placeholder="Martini">
           </div>
           <div class="form-group">
             <label for="example-description">Drink Ingredients</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Vodka/Gin, Vermouth, Olive"></textarea>
+            <textarea class="form-control" id="example-ingredients" aria-describedby="example-description" placeholder="Vodka/Gin, Vermouth, Olive"></textarea>
           </div>
           {{!-- <button id="submit" class="btn btn-primary float-right">Submit</button> --}}
         </form>
@@ -25,7 +25,7 @@
         <ul id="example-list" class="list-group">
           {{#each examples}}
           <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
+            <a href="example/{{this.id}}">{{this.name}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
           </li>
           {{/each}}
