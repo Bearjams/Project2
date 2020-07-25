@@ -1,35 +1,79 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Quaratine Cocktails</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Add a Recipe<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/search">Cocktail Search</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/random">Random Cocktail</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      Welcome to Quaratine Cocktails!
+    </span>
+  </div>
+</nav>
+
 <div id="home">
   <div class="container">
     <div class="row">
       <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>Quarentine Cocktails</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Add a Recipe</label>
-            <input type="text" id="example-name" class="form-control" aria-describedby="example-text" placeholder="Martini">
+        <div class="jumbotron">
+          <h1 class="display-4, text-center">Quarantine Cocktails!</h1>
+          <p class="lead, text-center">A site to search, generate random, and add your own cocktails!</p>
+          <hr class="my-4">
+
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3>Add Cocktail</h3>
+            <form class="clearfix mb-4" action="POST">
+              <div class="form-group">
+                <label for="example-text">Drink Name</label>
+                <input type="text" id="example-name" class="form-control" aria-describedby="example-text"
+                  placeholder="Martini">
+              </div>
+
+              <div class="form-group">
+                <label for="example-ingredients">Drink Ingredients</label>
+                <textarea class="form-control" id="example-ingredients" aria-describedby="example-description"
+                  placeholder="Vodka/Gin, Vermouth, Olive"></textarea>
+              </div>
+            
+
+              <div class="form-group">
+                <label for="example-instructions">Instructions</label>
+                <textarea class="form-control" id="example-instructions" aria-describedby="example-instruction"
+                  placeholder="Pour all ingredients into mixing glass with ice cubes...."></textarea>
+              </div>
+                <button id="submit" class="btn btn-primary float-right">Submit</button>
+              </form>
+            </form>
           </div>
-          <div class="form-group">
-            <label for="example-description">Drink Ingredients</label>
-            <textarea class="form-control" id="example-ingredients" aria-describedby="example-description" placeholder="Vodka/Gin, Vermouth, Olive"></textarea>
+        </div>
+        
+        <div class="card">
+          <div class="card-body">
+            <h3>Your Recipe:</h3>
+            <ul id="example-list" class="list-group">
+              {{#each examples}}
+              <li data-id="{{this.id}}" class="list-group-item">
+                <a href="example/{{this.id}}">{{this.name}}</a>
+                <button class="btn btn-danger float-right delete">ｘ</button>
+              </li>
+              {{/each}}
+
+            </ul>
           </div>
-          {{!-- <button id="submit" class="btn btn-primary float-right">Submit</button> --}}
-        </form>
-          <div class="form-group">
-            <label for="example-description">Instructions</label>
-            <textarea class="form-control" id="example-instructions" aria-describedby="example-description" placeholder="Pour all ingredients into mixing glass with ice cubes...."></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Your Recipe:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.name}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+        </div>
       </div>
     </div>
   </div>

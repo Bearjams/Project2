@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,28 +13,53 @@
 </head>
 
 <body topmargin="40" leftmargin="40" onLoad="downloadCocktail()"></body>
-<div class="jumbotron">
-    <h1 class="display-4, text-center">Quarentine Cocktails!</h1>
-    <p class="lead, text-center">A site to search, generate random, and add your own cocktails!</p>
-    <hr class="my-4">
-    <p class= "text-center">Search for a Cocktail!</p>
-    <div class = "center">
-        <a class="btn btn-primary btn-lg" href="#" role="button" onclick="downloadCocktail()">Search Cocktails</a><input type="text" id="cocktail" value="Margarita">
-    </div>
-</div>
-</div>
 
-<!-- <button onClick="downloadCocktail()">Search Cocktails</button> : <input type="text" id="cocktail" value="Margarita"><br>
-</br> -->
-<div class="card">
-    <div class="card-body">
-        <div id="drink-section">Loading..</div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Quaratine Cocktails</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Add a Recipe<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/search">Cocktail Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/random">Random Cocktail</a>
+                </li>
+            </ul>
+            <span class="navbar-text">
+                Welcome to Quaratine Cocktail!
+            </span>
+        </div>
+    </nav>
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4, text-center">Quarantine Cocktails!</h1>
+        <p class="lead, text-center">A site to search, generate random, and add your own cocktails!</p>
+        <hr class="my-4">
+        <p class="text-center">Search for a Cocktail!</p>
+        <div class="center">
+            <a class="btn btn-primary btn-lg" href="#" role="button" onclick="downloadCocktail()">Search
+                Cocktails</a><input type="text" id="cocktail" value="Margarita">
+        </div>
     </div>
-  </div>
+
+
+    <div class="card">
+        <div class="card-body">
+            <div id="drink-section">Loading..</div>
+        </div>
+    </div>
 
 
 
 </body>
+</div>
 
 </html>
 
