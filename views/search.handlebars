@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body topmargin="40" leftmargin="40" onLoad="downloadCocktail()"></body>
+<body topmargin="40" leftmargin="40"></body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Quaratine Cocktails</a>
@@ -44,15 +44,18 @@
         <hr class="my-4">
         <p class="text-center">Search for a Cocktail!</p>
         <div class="center">
-            <a class="btn btn-primary btn-lg" href="#" role="button" onclick="downloadCocktail()">Search
-                Cocktails</a><input type="text" id="cocktail" value="Margarita">
+            <input type="text" id="cocktail" value="Margarita">
+            <button type="submit" class="btn btn-outline-primary" onclick="downloadCocktail()">Seach Cocktail</button>
+            
         </div>
     </div>
 
 
-    <div class="card">
-        <div class="card-body">
-            <div id="drink-section">Loading..</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">        
+                <div id="drink-section" class="row section"></div>          
+            </div>
         </div>
     </div>
 

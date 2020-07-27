@@ -30,3 +30,11 @@ button,
 .form-control{
     margin-left: 0px;
 }
+
+#cocktail{
+    margin-right: 10px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+
+}
