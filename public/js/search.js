@@ -44,11 +44,11 @@ function displayRandomCocktail(drink) {
     cardContent.append(cardTitle);
     var cardPrice = $("<p>").text(instructions);
     cardContent.append(cardPrice);
-    
-    
 
-    
-    
+
+
+
+
 
     let index = 1;
     let ingredientArray = [];
@@ -75,5 +75,13 @@ function displayRandomCocktail(drink) {
 
     newCardCol.append(newCard);
     $("#drink-section").prepend(newCardCol);
-    
+
 }
+
+var input = document.getElementById("cocktail");
+input.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("myBtn").click();
+    }
+});

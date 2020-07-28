@@ -42,3 +42,9 @@ button,
 h1{
     text-align: center;
 }
+
+@media screen and (max-width: 320px) {
+    .container{
+        width: 100%;
+    }
+}
