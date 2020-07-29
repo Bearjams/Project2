@@ -42,3 +42,11 @@ button,
 h1{
     text-align: center;
 }
+
+@media screen and (max-height: 2000px){
+    img{
+        width: 100%;
+        
+    }
+}
+
