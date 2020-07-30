@@ -46,7 +46,16 @@ h1{
 @media screen and (max-height: 2000px){
     img{
         width: 100%;
+
         
     }
 }
 
+    }
+}
+
+@media screen and (max-height: 480px){
+    img{
+        width: 100%;
+    }
+}
